@@ -23,7 +23,7 @@ const Dashboard = () => {
     const checkAuth = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/auth/validate",
+          "https://react-login-sys.onrender.com/api/auth/validate",
           {
             method: "GET",
             credentials: "include", // Include cookies for secure authentication
@@ -47,10 +47,13 @@ const Dashboard = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/logout", {
-        method: "POST",
-        credentials: "include", // Include cookies for logout
-      });
+      const response = await fetch(
+        "https://react-login-sys.onrender.com/api/auth/logout",
+        {
+          method: "POST",
+          credentials: "include", // Include cookies for logout
+        }
+      );
 
       const data = await response.json();
       if (response.ok) {
