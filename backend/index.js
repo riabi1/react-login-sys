@@ -9,15 +9,20 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
+// Middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: true,
+    origin: "https://react-login-sys.vercel.app", // Frontend URL
     methods: ["GET", "POST"],
-    credentials: true,
+    credentials: true, // Enable credentials
   })
 );
+app.options("*", cors()); // Handle preflight requests
+
+// Routes
 app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 5000;

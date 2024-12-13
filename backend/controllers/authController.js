@@ -87,9 +87,12 @@ exports.login = async (req, res) => {
     console.error("Error during login:", err.message);
     res.status(500).json({ message: "Server error" });
   }
-};
+};// Validate user authentication
 exports.validateAuth = (req, res) => {
-  res.status(200).json({ message: "User is authenticated", user: req.user });
+  res.status(200).json({
+    message: "User is authenticated",
+    user: req.user, // User attached from middleware
+  });
 };
 exports.logout = (req, res) => {
   res.clearCookie("token", {
