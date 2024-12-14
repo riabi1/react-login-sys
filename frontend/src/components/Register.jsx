@@ -21,7 +21,7 @@ const Register = () => {
 
     try {
       const response = await fetch(
-        "https://react-login-sys.onrender.com/api/auth/register",
+        "https://react-login-sys-tg9a.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

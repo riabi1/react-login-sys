@@ -23,7 +23,7 @@ const Dashboard = () => {
     const checkAuth = async () => {
       try {
         const response = await fetch(
-          "https://react-login-sys.onrender.com/api/auth/validate",
+          "https://react-login-sys-tg9a.onrender.com/api/auth/validate",
           {
             method: "GET",
             credentials: "include", // Include cookies for secure authentication
@@ -48,7 +48,7 @@ const Dashboard = () => {
   const handleLogout = async () => {
     try {
       const response = await fetch(
-        "https://react-login-sys.onrender.com/api/auth/logout",
+        "https://react-login-sys-tg9a.onrender.com/api/auth/logout",
         {
           method: "POST",
           credentials: "include", // Include cookies for logout

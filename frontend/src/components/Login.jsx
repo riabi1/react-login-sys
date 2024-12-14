@@ -24,7 +24,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        "https://react-login-sys.onrender.com/api/auth/login",
+        "https://react-login-sys-tg9a.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -15,7 +15,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://react-login-sys.vercel.app", // Frontend URL
+    origin: [
+      "https://react-login-sys.vercel.app",
+      "https://react-login-sys.netlify.app", // New Frontend URL
+    ],
     methods: ["GET", "POST"],
     credentials: true, // Enable credentials
   })
